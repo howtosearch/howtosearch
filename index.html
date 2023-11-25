@@ -7,6 +7,7 @@
     h5 {text-align:center;}
 </style>
 	  <link rel="stylesheet" href="howto/style.css">
+	  <?php include 'howto/results.php';?>
 <title>HowTo - Stay informed!</title>
 </head>
 <!--   navbar begin  -->
@@ -23,11 +24,18 @@
 	<img src="images/howto.png" class="misc">
 	<br><br><br>
 <h2>
-	<div id="SearchBar" class="container">
-		<input type="search" value="" placeholder="How to..." spellcheck="false" id="search" onchange="openPage()">
+
+	<!--<div id="SearchBar" class="container" action="/search">
+		<input type="search" value="" placeholder="How to..." spellcheck="false" id="search" name="q" action="/search">
 		<button type="submit"><img src="images/sr.png"></button>
 	<script> src="./howto/search.js" type="module" </script>
-</div></h2>
+</div>
+-->
+	<form action="/search">
+		<input type="search" name="q" class="container" placeholder="How to...">
+		<button type="submit"><img src="images/sr.png"></button>
+	</form>
+</h2>
   <br>
   
 

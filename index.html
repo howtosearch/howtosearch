@@ -7,8 +7,13 @@
     h5 {text-align:center;}
 </style>
 	  <link rel="stylesheet" href="howto/style.css">
-	  <?php include 'howto/results.php';?>
+
 <title>HowTo - Stay informed!</title>
+
+    <script src="./howto/search.js" type="module"></script>
+	<script language="JavaScript1.3" type="text/javascript" src="./howto/jse_form.js"></script>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+
 </head>
 <!--   navbar begin  -->
  <div class="topnav">
@@ -25,14 +30,9 @@
 	<br><br><br>
 <h2>
 
-	<!--<div id="SearchBar" class="container" action="/search">
-		<input type="search" value="" placeholder="How to..." spellcheck="false" id="search" name="q" action="/search">
-		<button type="submit"><img src="images/sr.png"></button>
-	<script> src="./howto/search.js" type="module" </script>
-</div>
--->
+<!-- name="q" -->
 	<form action="/search">
-		<input type="search" name="q" class="container" placeholder="How to...">
+		<input type="search" id="search-input" class="container" placeholder="How to...">
 		<button type="submit"><img src="images/sr.png"></button>
 	</form>
 </h2>

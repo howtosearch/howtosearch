@@ -9,11 +9,17 @@
 
 h1 {
   font-size: 10px;
+  text-align:right;
 }
 
 h3 {
   font-size: 20px;
+  text-align:center;
 }
+
+h2 {text-align:center;}
+h4 {text-align:center;}
+h5 {text-align:left;}
 
 .MenuBar {
   background-color: #333;
@@ -48,6 +54,16 @@ h3 {
     height: 140px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+input.button-icon {
+    background-image: url(images/sr.png);
+    background-color: transparent;
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+
 }
 
 html {

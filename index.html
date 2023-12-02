@@ -3,7 +3,7 @@
 	  <link rel="stylesheet" href="howto/style.css">
 
  <title>HowTo - Stay informed!</title>
-<script src="search.js" type="module"></script>
+	<script src="howto_form.js" language="JavaScript1.3" type="text/javascript"></script>
 
 <!--   navbar begin  -->
  <div class="topnav">
@@ -17,19 +17,18 @@
 </head>
 
 <body>
-
+<!-- Title Image -->
 	<img src="images/howto.png" class="misc">
 	<br><br><br>
 
- <div class="container">
+<!-- Searchbar -->
+<h2>
+	<form name="howto_Form" onsubmit="search_form(howto_Form);return false">
+	<input type="text" name="d" placeholder="How to...">
+	<input type="image" src="images/sr.png" onclick="search_form(howto_Form)" >
+	</form>
+</h2>
 
-    <input type="text" id="search-input" placeholder="How To...">
-    <button onclick="search()"><img src="images/sr.png"></button>
-
-    <div id="results"></div>
-
- </div>
 
 </body>
-
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head>
+	  <link rel="stylesheet" href="howto/style.css">
+
+ <title>HowTo - Stay informed!</title>
+	<script src="howto_form.js" language="JavaScript1.3" type="text/javascript"></script>
+	<script src="howto_search.js" language="JavaScript1.3" type="text/javascript"></script>
+
+<!--   navbar begin  -->
+ <div class="topnav">
+    <h1><a href="index.html">Home</a>
+	<a href="index.html">Settings</a></h1>
+  </div>
+<!-- navbar end -->
+
+<br><br><br><br><br><br>
+
+</head>
+
+<!-- searchbar -->
+
+<body>
+  <h5><div class="container">
+	<form name="howto_Form" onsubmit="search_form(howto_Form);return false">
+		<img src="images/howtomini.png" class="titlemini"><input type="text" name="d" placeholder="How to...">
+		<input type="image" src="images/sr.png" onclick="search_form(howto_Form)">
+	</form>
+</h5>
+
+<script language="JavaScript1.3" type="text/javascript">return_query()</script>
+
+
+<!-- Where the results will be -->
+
+<script language="JavaScript1.3" type="text/javascript">num_jse()</script> results found.
+<hr>
+<p>
+<script language="JavaScript1.3" type="text/javascript">
+out_jse()
+</script>
+<p>&nbsp;
+
+	<div class="showform" id="showform" hidden>
+		<pHello</p>
+	</div>
+
+</body>
+</html>

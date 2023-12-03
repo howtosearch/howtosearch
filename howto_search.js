@@ -3,19 +3,9 @@
 var include_num = 1;
 var bold = 0;
 
-// ---------- site indexer variable, just an array for now ----------
+// site indexer variable, just an array for now
 
-
-var s = new Array();
-
-s[0] = "Valve Developer Community | Category:Level Design FAQ^https://developer.valvesoftware.com/wiki/Category:Level_Design_FAQ^ This is a directory of Frequently Asked Questions about level editing and using the Hammer editor.";
-s[1] = "Valve Developer Community | Creating a Material^https://developer.valvesoftware.com/wiki/Creating_a_Material^This tutorial is a step-by-step guide to creating a brand new material, including the creation of the material's texture. ";
-s[2] = "W3 Schools | HTML Styles - CSS^https://www.w3schools.com/html/html_css.asp^CSS stands for Cascading Style Sheets. CSS saves a lot of work. It can control the layout of multiple web pages all at once.";
-
-
-//s[1] = "^^";
-
-// ---------- end of script properties and sites ----------
+// end of script properties and sites
 
 
 var cookies = document.cookie;

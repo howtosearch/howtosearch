@@ -11,6 +11,4 @@ function loadFile(filePath) {
   return result;
 }
 
-test1 = loadFile("\data.txt");
-s = test1.split("\r\n");
-//console.log(s);
+s = loadFile("\data.txt").split("\r\n");

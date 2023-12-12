@@ -10,7 +10,7 @@ var resultstab = "results.html";
 
 function search_form(howto_Form) {
 	if (howto_Form.d.value.length > 0) {
-		document.cookie = "d=" + escape(howto_Form.d.value) + "; SameSite=Lax;";
+		document.cookie = "d=" + escape(howto_Form.d.value);
 		window.location = resultstab;
 	}
 }

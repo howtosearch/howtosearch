@@ -1,16 +1,18 @@
-// script properties
+// script variables
 
 var include_num = 1;
 var bold = 0;
+var od = d;
+var switchme = 0;
+var r = new Array();
+var co = 0;
 
-// site indexer variable, just an array for now
-
-// end of script properties and sites
-
-
+// variable definition for the cookie
 var cookies = document.cookie;
 var p = cookies.indexOf("d=");
 
+// looks for cookie defined above, extracts it and converts it for use in results page
+// apparently unescape isn't recommended anymore, look for viable alternative
 if (p != -1) {
 	var st = p + 2;
 	var en = cookies.indexOf(";", st);
@@ -20,16 +22,13 @@ if (p != -1) {
 	var d = cookies.substring(st, en);
 	d = unescape(d);
 }
-var od = d;
-var m = 0;
+// puts search results with potentially exploitative characters in quotes
 if (d.charAt(0) == '"' && d.charAt(d.length - 1) == '"') {
-	m = 1;
+	switchme = 1;
 }
 
-var r = new Array();
-var co = 0;
 
-if (m == 0) {
+if (switchme == 0) {
 	var woin = new Array();
 	var w = d.split(" ");
 	for (var a = 0; a < w.length; a++) {
@@ -72,7 +71,7 @@ if (m == 0) {
 	co = a;
 }
 
-if (m == 1) {
+if (switchme == 1) {
 	d = d.replace(/"/gi, "");
 	var a = 0;
 	var pat = new RegExp(d, "i");
@@ -84,18 +83,19 @@ if (m == 1) {
 		}
 	}
 	co = a;
-
 }
 
-
+// function for moving the cookie to results tab
 function return_query() {
 	document.howto_Form.d.value = od;
 }
 
-function num_jse() {
+// define the number of results for displaying to end user 
+function resultsnumber() {
 	document.write(co);
 }
 
+// If query returns no results, display this message. Otherwise, display results
 function out_jse() {
 	if (co == 0) {
 		document.write('Think there should be results for that?<p> Please let us know! We will add it to our database.');
@@ -103,7 +103,7 @@ function out_jse() {
 	}
 	for (var a = 0; a < r.length; a++) {
 		var os = r[a].split("^");
-		if (bold == 1 && m == 1) {
+		if (bold == 1 && switchme == 1) {
 			var br = "<b>" + d + "</b>";
 			os[2] = os[2].replace(pat, br);
 		}

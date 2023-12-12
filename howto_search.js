@@ -96,7 +96,7 @@ function resultsnumber() {
 }
 
 // If query returns no results, display this message. Otherwise, display results
-function out_jse() {
+function searchoutput() {
 	if (co == 0) {
 		document.write('Think there should be results for that?<p> Please let us know! We will add it to our database.');
 		return;
